@@ -9,6 +9,8 @@
     <PackageProjectUrl>https://github.com/kbrashears5/net-standard-cache-helper</PackageProjectUrl>
     <RepositoryUrl>https://github.com/kbrashears5/net-standard-cache-helper</RepositoryUrl>
     <RepositoryType>github</RepositoryType>
+    <PackageId>NetStandardCacheHelper</PackageId>
+    <Product>NetStandardCacheHelper</Product>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
