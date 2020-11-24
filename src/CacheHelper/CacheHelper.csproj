@@ -11,6 +11,7 @@
     <RepositoryType>github</RepositoryType>
     <PackageId>NetStandardCacheHelper</PackageId>
     <Product>NetStandardCacheHelper</Product>
+    <PackageTags>cache;helper;mock;tests;netstandard</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
