@@ -127,9 +127,9 @@ namespace CacheHelper
 
             var cache = this.Caches.Where(c => c.Key == cacheName).FirstOrDefault();
 
-            if (default(KeyValuePair<string, MemoryCache>).Equals(cache)) throw new CacheNotFoundException(cacheName: cacheName);
-
-            return cache.Value;
+            return default(KeyValuePair<string, MemoryCache>).Equals(cache)
+                ? throw new CacheNotFoundException(cacheName: cacheName)
+                : cache.Value;
         }
 
         public T Get<T>(string cacheName,

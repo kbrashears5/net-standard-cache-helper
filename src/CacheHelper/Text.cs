@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CacheHelper
 {
@@ -15,19 +14,9 @@ namespace CacheHelper
 
         public static string ZeroTimeout { get; } = "Timeout cannot be 0";
 
-        public static string DuplicateCacheNames(IEnumerable<string> cacheNames)
-        {
-            if (cacheNames == null) throw new ArgumentNullException(nameof(cacheNames));
+        public static string DuplicateCacheNames(IEnumerable<string> cacheNames) => $"Duplicate cache names were provided: [{string.Join(",", cacheNames)}]";
 
-            return $"Duplicate cache names were provided: [{string.Join(",", cacheNames)}]";
-        }
-
-        public static string CacheNotFound(string cacheName)
-        {
-            if (string.IsNullOrWhiteSpace(cacheName)) throw new ArgumentNullException(nameof(cacheName));
-
-            return $"Cache not found: [{cacheName}]";
-        }
+        public static string CacheNotFound(string cacheName) => $"Cache not found: [{cacheName}]";
 
 #pragma warning restore CS1591
     }
